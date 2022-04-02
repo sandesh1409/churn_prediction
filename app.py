@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify, render_template
 import pickle
 
-app = Flask(__name__,template_folder='template')
+app = Flask(__name__)#,template_folder='template')
 #model = pickle.load(open('modelfile1.pkl', 'rb'))
 mod = 'modelfile1.pkl'
 with open(mod, 'rb') as d:
@@ -13,7 +13,7 @@ def home():
 
 
 @app.route("/predict", methods=["POST"])#,"GET"])
-def predict():
+def process():
     if request.method == "POST":
 
         signup_date = request.form.get("signup_date")
