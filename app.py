@@ -14,7 +14,7 @@ def home():
 
 @app.route("/predict", methods=["POST"])#,"GET"])
 def process():
-    if request.method == "POST":
+    #if request.method == "POST":
 
         signup_date = request.form.get("signup_date")
         ref_date = request.form.get("ref_date")
