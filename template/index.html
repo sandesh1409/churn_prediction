@@ -17,7 +17,7 @@
 	<h1>Customer Retension</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict')}}"method="post">
+    <form action="{{ url_for('process')}}"method="post">
     	<input type="date" name="signup_date" placeholder="dd-mm-yyyy" required="required" />
         <input type="date" name="ref_date" placeholder="dd-mm-yyyy" required="required" />
 	<input type="number" name="time" placeholder="time (minutes)" required="required" />
@@ -28,13 +28,7 @@
          <option value=1>1(Intermediate)</option>
          <option value=2>2(High)</option>
         </select>
-        <label for="country">Choose a country:</label>
-        <select name="country" id="country">
-         <option value="Brazil">Brazil</option>
-         <option value="Canada">Canada</option>
-         <option value="Mexico">Mexico</option>
-         <option value="United State">United State</option>
-        </select>
+        
         <br><br>
     
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
